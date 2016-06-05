@@ -21,6 +21,10 @@
   "bugs": {
     "url": "https://github.com/moooji/url-absolute/issues"
   },
+  "dependencies": {
+    "custom-error-generator": "^7.0.0",
+    "valido": "^1.0.19"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^2.11.1",
