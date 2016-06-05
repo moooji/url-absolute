@@ -2,52 +2,51 @@
 
 const expect = require('chai').expect;
 const absolutify = require('../index');
-const InvalidArgumentError = absolutify.InvalidArgumentError;
 
 describe('Join', () => {
-  it('should throw InvalidArgumentError if url is a number', () => {
+  it('should throw TypeError if url is a number', () => {
     expect(() => absolutify('http://www.google.com', 123))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if url is an array', () => {
+  it('should throw TypeError if url is an array', () => {
     expect(() => absolutify('http://www.google.com', []))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if url is null', () => {
+  it('should throw TypeError if url is null', () => {
     expect(() => absolutify('http://www.google.com', null))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if url is undefined', () => {
+  it('should throw TypeError if url is undefined', () => {
     expect(() => absolutify('http://www.google.com', undefined))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if baseUrl is a number', () => {
+  it('should throw TypeError if baseUrl is a number', () => {
     expect(() => absolutify(123, '/index.html'))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if baseUrl is an array', () => {
+  it('should throw TypeError if baseUrl is an array', () => {
     expect(() => absolutify([], '/index.html'))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if baseUrl is null', () => {
+  it('should throw TypeError if baseUrl is null', () => {
     expect(() => absolutify(null, '/index.html'))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if baseUrl is undefined', () => {
+  it('should throw TypeError if baseUrl is undefined', () => {
     expect(() => absolutify(undefined, '/index.html'))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
-  it('should throw InvalidArgumentError if baseUrl is not absolutify', () => {
+  it('should throw TypeError if baseUrl is not absolutify', () => {
     expect(() => absolutify('/index.html', '/index.html'))
-      .to.throw(InvalidArgumentError);
+      .to.throw(TypeError);
   });
 
   it('should return an absolute url for HTTP', () => {

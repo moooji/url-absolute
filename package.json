@@ -1,6 +1,6 @@
 {
   "name": "url-absolute",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Makes a partial URL absolute (based on a given base URL)",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,6 @@
     "url": "https://github.com/moooji/url-absolute/issues"
   },
   "dependencies": {
-    "custom-error-generator": "^7.0.0",
     "valido": "^1.0.19"
   },
   "devDependencies": {
