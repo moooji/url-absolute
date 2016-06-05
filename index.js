@@ -14,6 +14,10 @@ function absolutify(baseUrl, partialUrl) {
     throw new InvalidArgumentError('Invalid partial URL');
   }
 
+  if (validation.isUrl(partialUrl)) {
+    return partialUrl;
+  }
+
   return url.resolve(baseUrl, partialUrl);
 }
 
