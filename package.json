@@ -1,6 +1,6 @@
 {
   "name": "url-absolute",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Makes a partial URL absolute (based on a given base URL)",
   "main": "index.js",
   "scripts": {
